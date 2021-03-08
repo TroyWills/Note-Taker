@@ -1,17 +1,11 @@
+// Dependencies 
 const express = require("express");
 const app = express();
 const port = 3000; 
 
-// app.get("/", (req, res) => {
-//     res.send('Our express server is up and running');
-// });
-
-//  app.get('/notes', (req, res) => {
-//      res.send("running at /test");
-//  });
-
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(express.static(__dirname + '/public'));
 
 // require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
