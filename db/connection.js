@@ -1,12 +1,14 @@
 const util = require("util");
 const mysql = require("mysql");
 
-const connection = mysql.createConnection({
+const connectionString = process.env.JAWSDB_URL || {
   host: "localhost",
   user: "root",
   password: "root",
   database: "notes"
-});
+}
+
+const connection = mysql.createConnection(connectionString);
 
 connection.connect();
 
