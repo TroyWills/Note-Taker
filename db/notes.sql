@@ -1,5 +1,4 @@
--- Creates the database in workbench dropping if alrewady exists 
-
+-- Creates the database in workbench dropping if already exists 
 DROP DATABASE IF EXISTS notes
 create DATABASE notes;
 use notes;
