@@ -1,7 +1,7 @@
 -- Creates the database in workbench dropping if already exists 
 DROP DATABASE IF EXISTS notes
-create DATABASE notes;
-use notes;
+CREATE DATABASE notes;
+USE notes;
 
 -- Creates the table in workbench with primary key set
 CREATE TABLE notes (

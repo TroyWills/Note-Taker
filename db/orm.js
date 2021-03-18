@@ -12,7 +12,7 @@ class Database {
 
     // METHOD -  create new note and store in DB
     createNote(title, notetext) {
-        return this.connection.query("Insert into notes SET ?, ?", [title, notetext])
+        return this.connection.query("INSERT INTO notes (title, notetext) VALUES (?, ?);", [title, notetext])
     }
 
     // METHOD - delete one note in DB
