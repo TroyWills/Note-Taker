@@ -2,7 +2,7 @@
 const orm = require("../db/orm")
 const router = require("express").Router();
 
-router.get("/notes"), function(req, res) {
+router.get("/notes", function(req, res) {
   console.log("here!");
   orm.getNotes()
   .then(results => {
@@ -12,6 +12,6 @@ router.get("/notes"), function(req, res) {
   .catch(function(err){
     console.log(err)
   })
-}
+});
 
 module.exports = router;
