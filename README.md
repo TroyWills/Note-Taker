@@ -3,14 +3,10 @@ Note-Taker
 Application to store user notes 
 
 Instructions for use: 
-    1. run `npm init` to load package.json into project 
-    2. run `npm install express express-router mysql2 path` to install dependencies 
-
-Current Status: 
-    - Heroku deploy working 
-    - HTML routes established
-    - MYSQL initialization working 
-    - API routes 
-
+    -in Bash run cmd `npm install express mysql` to install dependencies 
+        -Dependencies:
+        "express": "^4.17.1",
+        "express-router": "0.0.1",
+        "mysql": "^2.18.1"
 
     
