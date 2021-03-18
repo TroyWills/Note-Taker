@@ -1,19 +1,17 @@
-const database = require("../db/database");
+// IMPORT ORM 
+const orm = require("../db/orm")
+const router = require("express").Router();
 
-module.exports = function(app) {
-
-// GET `/api/notes` -
-app.get("/api/tables", function(req, res) {
-    res.json(tableData);
-  });
-
-// POST `/api/notes`Should receive a new note to save on the request body, 
-app.post('/api/notes', function (req, res) {
-    res.send('POST request to the homepage')
+router.get("/notes"), function(req, res) {
+  console.log("here!");
+  orm.getNotes()
+  .then(results => {
+    console.log(results);
+    res.json(results);
+  })      
+  .catch(function(err){
+    console.log(err)
   })
+}
 
-//DELETE `/api/notes/:id` 
-app.delete('/api/notes/:id', function (req, res) {
-    res.send('Got a DELETE request at /user')
-  })
-};
+module.exports = router;
