@@ -13,8 +13,19 @@ router.get("/notes", function (req, res) {
 });
 
 router.post("/notes", function (req, res) {
-  const {title, text} = req.body;
+  const { title, text } = req.body;
   orm.createNote(title, text)
+    .then(results => {
+      console.log(results)
+      res.json(results);
+    })
+    .catch(function (err) {
+      console.log(err)
+    })
+});
+
+router.delete("/notes/:id", function (req, res) {
+  orm.deleteNote(req.params.id)
     .then(results => {
       console.log(results)
       res.json(results);

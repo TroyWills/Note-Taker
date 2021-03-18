@@ -17,7 +17,7 @@ class Database {
 
     // METHOD - delete one note in DB
     deleteNote(id) {
-        return this.connection.query("Delete from notes where id = ?", id);
+        return this.connection.query("Delete from notes where id = ?;", id);
     }
 
 }
